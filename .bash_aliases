@@ -1,5 +1,6 @@
 alias a='source ~/.bashrc'
-alias qa='nano ~/.bash_aliases'
+alias b=nano
+alias qa='b ~/.bash_aliases'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 alias cd....='cd ../../..'
