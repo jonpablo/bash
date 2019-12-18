@@ -1,0 +1,12 @@
+alias a='source ~/.bashrc'
+alias qa='nano ~/.bash_aliases &'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
+alias cd.....='cd ../../../..'
+alias ..=cd..
+alias ...=cd...
+alias ....=cd....
+alias .....=cd.....
+alias d=ls
+alias dir='ls -al'
