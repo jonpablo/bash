@@ -24,9 +24,9 @@ fi
 export PS1="$__user_and_host$__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color"
 
 #
-# Fix stupid blue folders.
+# Fix stupid folder colors when running under Windows.
 #
-LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+LS_COLORS=$LS_COLORS:'di=1;35:ow=00;35' ; export LS_COLORS
 
 #
 # My aliases.
@@ -45,6 +45,7 @@ alias .....=cd.....
 alias d=ls
 alias dir='ls -al'
 alias cls=clear
+alias shocol='for x in {0..8}; do for i in {30..37}; do for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done; echo; done; done; echo ""'
 
 nd() {
     mkdir $1 && cd $1
