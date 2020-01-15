@@ -5,7 +5,7 @@ at1="\[\033[01;38;5;250m\]@"
 na1="\[\033[01;38;5;215m\]\h"
 co1="\[\033[01;38;5;250m\]:"
 cd1="\[\033[01;38;5;088m\]\w"
-ds1="\[\033[01;38;5;250m\]$"
+ds1="\[\033[01;38;5;250m\]$" 
 loc="$at1$na1$co1$cd1$ds1"
 
 if [ "$USER" = "jonathon" ]; then
@@ -27,9 +27,15 @@ fi
 export PS1="$__user_and_host"
 
 #
-# Fix stupid folder colors when running under Windows.
+# Fancier prompt if powerline-fonts used
 #
-LS_COLORS=$LS_COLORS:'di=1;35:ow=00;35' ; export LS_COLORS
+source ~/.fancyprompt.sh
+
+
+#
+# Fix stupid folder colors when running under Windows..
+#
+LS_COLORS=$LS_COLORS:'di=1;35:ow=1;35' ; export LS_COLORS
 
 #
 # My aliases.
